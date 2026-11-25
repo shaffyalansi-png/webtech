@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Helpdesk | Cozy Tech Support</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f2e9;
+    color: #554a3d;
+}
+
+/* Header */
+header {
+    background: #e5ddcf;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 27px;
+    color: #6e5943;
+}
+
+.logo p {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #887761;
+}
+
+nav a {
+    text-decoration: none;
+    color: #665540;
+    margin-left: 22px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #9a7653;
+}
+
+/* Hero */
+.hero {
+    min-height: 420px;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: #eee5d8;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #715a42;
+    margin-bottom: 18px;
+}
+
+.hero-text p {
+    line-height: 1.8;
+    color: #887661;
+    margin-bottom: 22px;
+}
+
+.hero-text a {
+    display: inline-block;
+    background: #8b947b;
+    color: white;
+    padding: 13px 22px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.hero-text a:hover {
+    background: #6f7d62;
+}
+
+.hero img {
+    width: 45%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* General sections */
+section {
+    padding: 55px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    color: #70583f;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    text-align: center;
+    color: #95836c;
+    margin-bottom: 35px;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background: #fffdf8;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #65523b12;
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.service-card article {
+    padding: 22px;
+}
+
+.service-card h3 {
+    color: #7c654b;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #887965;
+}
+
+/* Support process */
+.process {
+    background: #e8e1d5;
+}
+
+.process-list {
+    max-width: 750px;
+    margin: auto;
+    background: #fffdf8;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.process-list ol {
+    padding-left: 22px;
+}
+
+.process-list li {
+    padding: 12px 0;
+    line-height: 1.7;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffdf8;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px;
+    border: 1px solid #e7dfd2;
+    text-align: left;
+}
+
+th {
+    background: #a0a68f;
+    color: white;
+}
+
+tr:hover {
+    background: #f0ece3;
+}
+
+/* About and list */
+.about {
+    background: #fffdf8;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.about-content ul {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background: #e7dfd2;
+}
+
+.contact p {
+    margin: 12px 0;
+    color: #77644c;
+}
+
+.contact a {
+    color: #7b866b;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background: #827661;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 7px;
+        display: inline-block;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <h1>☕ CozyTech Helpdesk</h1>
+        <p>Your friendly technology support center</p>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <h2>Technology made simple & stress-free.</h2>
+
+        <p>
+            Welcome to CozyTech Helpdesk. We help you solve computer,
+            software, network and technical problems with simple and
+            reliable support.
+        </p>
+
+        <a href="#services">Explore Our Services →</a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80"
+         alt="Computer workspace">
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+    <h2 class="section-heading">Our IT Services 🌿</h2>
+
+    <p class="section-intro">
+        Simple solutions for your everyday technology problems.
+    </p>
+
+    <div class="services">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+                 alt="Laptop computer">
+
+            <article>
+                <h3>Computer Support</h3>
+                <p>
+                    Assistance with computer errors, slow systems,
+                    hardware problems and device maintenance.
+                </p>
+            </article>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                 alt="Software on computer">
+
+            <article>
+                <h3>Software Assistance</h3>
+                <p>
+                    Help with software installation, updates,
+                    application errors and configuration.
+                </p>
+            </article>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+                 alt="Network and technology">
+
+            <article>
+                <h3>Network Support</h3>
+                <p>
+                    Support for Wi-Fi issues, internet connectivity
+                    and network troubleshooting.
+                </p>
+            </article>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80"
+                 alt="Printer device">
+
+            <article>
+                <h3>Printer Support</h3>
+                <p>
+                    Assistance with printer setup, printing problems,
+                    connection and maintenance.
+                </p>
+            </article>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+                 alt="Cyber security technology">
+
+            <article>
+                <h3>Cybersecurity</h3>
+                <p>
+                    Basic security awareness, system protection,
+                    updates and account safety assistance.
+                </p>
+            </article>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                 alt="Computer hardware components">
+
+            <article>
+                <h3>Hardware Maintenance</h3>
+                <p>
+                    Computer hardware checking, maintenance,
+                    component inspection and technical assistance.
+                </p>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- SUPPORT PROCESS -->
+<section class="process" id="process">
+
+    <h2 class="section-heading">How Our Support Works</h2>
+
+    <p class="section-intro">
+        Four simple steps to get your technical problem solved.
+    </p>
+
+    <div class="process-list">
+
+        <ol>
+            <li>
+                <strong>Report Your Issue</strong> – Explain your technical
+                problem to the IT helpdesk team.
+            </li>
+
+            <li>
+                <strong>Issue Identification</strong> – The support team
+                identifies the cause of the problem.
+            </li>
+
+            <li>
+                <strong>Solution & Support</strong> – A suitable solution
+                is provided to fix the issue.
+            </li>
+
+            <li>
+                <strong>Resolution</strong> – The issue is resolved and
+                the system is checked.
+            </li>
+        </ol>
+
+    </div>
+</section>
+
+<!-- SERVICE TABLE -->
+<section id="information">
+
+    <h2 class="section-heading">Service Information</h2>
+
+    <p class="section-intro">
+        A quick overview of our support departments.
+    </p>
+
+    <div class="table-container">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Support Type</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Computer Support</td>
+                    <td>Hardware & system issues</td>
+                    <td>Monday – Saturday</td>
+                </tr>
+
+                <tr>
+                    <td>Software Assistance</td>
+                    <td>Installation & errors</td>
+                    <td>Monday – Saturday</td>
+                </tr>
+
+                <tr>
+                    <td>Network Support</td>
+                    <td>Internet & Wi-Fi</td>
+                    <td>Monday – Saturday</td>
+                </tr>
+
+                <tr>
+                    <td>Printer Support</td>
+                    <td>Printing & connectivity</td>
+                    <td>Monday – Saturday</td>
+                </tr>
+
+                <tr>
+                    <td>Cybersecurity</td>
+                    <td>Security & protection</td>
+                    <td>Monday – Saturday</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="section-heading">About CozyTech</h2>
+
+    <div class="about-content">
+
+        <p>
+            CozyTech IT Helpdesk is a technology support center designed
+            to assist users with their everyday computer and IT problems.
+            Our goal is to make technology easy, accessible and reliable
+            for everyone through friendly support and practical solutions.
+        </p>
+
+        <ul>
+            <li>Friendly and reliable technical assistance</li>
+            <li>Quick identification of IT problems</li>
+            <li>Computer and network troubleshooting</li>
+            <li>Software and hardware support</li>
+            <li>Safe and secure technology guidance</li>
+        </ul>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-heading">Contact Our Helpdesk ☕</h2>
+
+    <p>Need help with your device or system? Reach out to our support team.</p>
+
+    <p>📧 Email:
+        <a href="mailto:support@cozytech.example">
+            support@cozytech.example
+        </a>
+    </p>
+
+    <p>📞 Phone: +91 90000 00000</p>
+
+    <p>🕒 Support Hours: Monday – Saturday, 9 AM – 5 PM</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 CozyTech IT Helpdesk</p>
+    <p>Made with care for a better technology experience 🌿</p>
+</footer>
+
+</body>
+</html>
